@@ -17,7 +17,7 @@ class OrderForm extends Component {
     if(!this.state.name || !this.state.ingredients) {
       this.setState({error: true})
     } else {
-      console.log("Order up!")
+      this.props.postOrders(this.state.name, this.state.ingredients)
       this.clearInputs();
     }
   }
