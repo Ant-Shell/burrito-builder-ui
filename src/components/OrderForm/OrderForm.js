@@ -14,7 +14,7 @@ class OrderForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    if(!this.state.name || !this.state.ingredients) {
+    if(this.state.name === '' || !this.state.ingredients.length === 0) {
       this.setState({error: true})
     } else {
       this.props.postOrders(this.state.name, this.state.ingredients)
@@ -62,7 +62,7 @@ class OrderForm extends Component {
         <button onClick={e => this.handleSubmit(e)}>
           Submit Order
         </button>
-        {this.state.error === true && <p>Please complete your order ...</p>}
+        {this.state.error === true && <p className=".error">Please complete your order ...</p>}
       </form>
     )
   }
