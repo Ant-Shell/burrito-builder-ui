@@ -16,6 +16,10 @@ class OrderForm extends Component {
     this.clearInputs();
   }
 
+  handleNameChange = (event) => {
+    this.setState({[event.target.name]: event.target.value})
+  }
+
   clearInputs = () => {
     this.setState({name: '', ingredients: []});
   }
