@@ -8,7 +8,7 @@ const Orders = ({orders}) => {
       <Order 
       id={order.id}
       name={order.name}
-      ingerdients={order.ingredients}
+      ingredients={order.ingredients}
       key={Date.now() + order.id}
       />
     )
